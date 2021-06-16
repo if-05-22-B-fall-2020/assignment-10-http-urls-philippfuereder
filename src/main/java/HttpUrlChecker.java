@@ -27,8 +27,7 @@ import java.util.regex.Pattern;
 
 public class HttpUrlChecker {
     public static Matcher getMatcher(String httpString) {
-        //Pattern pattern = Pattern.compile("^((http)|(https))://(www.?)[a-zA-z0-9]*.([a-z][a-z]*)$");
-        Pattern pattern = Pattern.compile("^(http)(://)[.]*(www.?)[a-zA-z0-9]*(.)(com)");
+        Pattern pattern = Pattern.compile("^(http)(s?)://[.]*(www.?)[a-zA-z0-9]*(.)(com)");
         return pattern.matcher(httpString);
     }
 }
